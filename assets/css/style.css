@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
@@ -149,7 +150,7 @@ p {
 
 .intro-content {
   position: relative;
-  top: -8rem;
+ /* top: -8rem; */
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: var(--gap);
@@ -257,4 +258,74 @@ tfoot td {
 
 .responsive-table {
   overflow: auto;
+}
+
+.contact-form {
+  grid-column: span 2;
+}
+
+.contact-form .form-grid {
+  border: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+}
+
+.form-grid legend {
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.form-group {
+  flex: 1 1 32rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+  border: none;
+  background-color: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  font-size: 3rem;
+  border-radius: 1.2rem;
+}
+
+body .full-width {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.form-group button {
+  border: 0.5rem solid var(--white-color);
+  background: none;
+  color: var(--white-color);
+  padding: 1.5rem 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.form-group button:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+.form-group ::placeholder {
+  color: rgb(194, 192, 192)
+}
+
+.footer {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.footer p {
+  margin: 0;
+  padding: 3rem;
 }
