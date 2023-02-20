@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/media.css">
   <title>Landing Page</title>
 </head>
-<body>
+<body class="size" onresize="mudouTamanho()">
+
+<span id="menu" class="material-symbols-outlined" onclick="showMenu()">menu</span>
+
+
   <aside class="menu white-bg">
 
     <div class="main-content menu-content">
@@ -16,7 +21,7 @@
         <a href="#intro">LOGO</a>
       </h1>
       <nav>
-        <ul>
+        <ul onclick="hideMenu()">
           <li><a href="#intro">Intro</a> </li>
           <li><a href="#top3">Top 3</a> </li>
           <li><a href="#grid-one">Grid one</a> </li>
@@ -195,8 +200,47 @@
         </div>
       </div>
     </section>
+
   <footer class="white-bg footer">
     <p>Feito por Guilherme Souza</p>
   </footer>
+
+  <a href="#intro" class="back-to-top">
+    <span class="material-symbols-outlined">
+    arrow_upward
+    </span></a>
+
+  <script>
+    const menu = document.querySelector('.menu');
+    const menuMobile = document.getElementById('menu');
+    let largura = window.innerWidth;
+    let pagina = document.querySelector('.size');
+
+    function mudouTamanho () {
+      if (pagina.clientWidth >= 668) {
+        menu.style.display = 'block';
+      } 
+    }
+    
+    
+    function showMenu () {
+        if (menuMobile.innerHTML === 'menu') {
+        menu.style.display = 'block';
+        menuMobile.innerHTML = 'close';
+        } else {
+        menu.style.display = 'none';
+        menuMobile.innerHTML = 'menu';
+      }      
+    }
+    
+
+   function hideMenu() {
+    if (window.matchMedia("(max-width:705px)").matches) {
+      menu.style.display = 'none';
+      menuMobile.innerHTML = 'menu';
+    }
+   }
+
+  </script>
 </body>
 </html>

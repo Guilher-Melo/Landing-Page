@@ -1,4 +1,4 @@
-@media (max-width: 80rem) {
+@media (max-width: 44rem) {
   .into-content, .grid {
     grid-template-columns: 1fr;
   }
@@ -16,4 +16,48 @@
   .main-content {
     display: block;
   }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu-content, .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' -25,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  position: fixed;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-spacing {
+  display: none;
+}
 }
